@@ -28,7 +28,7 @@ Starboy blends **FastAPI + PostgreSQL** on the backend with a **Next.js App Rout
 ### **Frontend**
 - Next.js 15 (App Router)
 - React
-- TailwindCSS (future)
+- TailwindCSS
 - Fetch API
 
 ### **Backend**
@@ -75,3 +75,10 @@ runs at http://localhost:3000
 - add more backend routes to make data retrieval more efficient
 - deploy frontend and backend, methods not decided yet
 
+---
+
+## ⭐⭐
+created by me natone  
+inspired by astronomy, the stars, and building interesting backend systems  
+name was inpired by the weeknd album starboy  
+created to learn more a sql db (postgres) in a fullstack env 
