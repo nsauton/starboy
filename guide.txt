@@ -1,0 +1,8 @@
+for backend run
+    uvicorn server:app --reload
+
+for frontend run
+    npm run dev
+
+to edit db manually run (in backend folder?)
+    psql -U postgres -d myapp
