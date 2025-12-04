@@ -80,5 +80,5 @@ runs at http://localhost:3000
 ## ⭐⭐
 created by me natone  
 inspired by astronomy, the stars, and building interesting backend systems  
-name was inpired by the weeknd album starboy  
-created to learn more a sql db (postgres) in a fullstack env 
+created to learn and experiment with a sql database (postgres) in a fullstack env  
+the starboy name was inpired by the weeknd album  
