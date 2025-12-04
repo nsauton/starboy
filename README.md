@@ -45,22 +45,22 @@ Starboy blends **FastAPI + PostgreSQL** on the backend with a **Next.js App Rout
 
 ### **Database**
 
-make sure empty database called starboy exists in postgres, then backend can be ran to make the tables
-to mess with db either use pgadmin4 or run the following command in terminal
-psql -U postgres -d starboy
+make sure empty database called starboy exists in postgres, then backend can be ran to make the tables  
+to mess with db either use pgadmin4 or run the following command in terminal:  
+    psql -U postgres -d starboy
 
 ### **Backend**
 
 In backend directory run  
-uvicorn main:app --reload
+    uvicorn main:app --reload
 
 runs at http://localhost:8000
 
 ### **Frontend**
 
-In frontend directory run
-npm install
-npm run dev
+In frontend directory run  
+    npm install  
+    npm run dev  
 
 runs at http://localhost:3000
 
