@@ -55,7 +55,7 @@ In backend directory run
     uvicorn main:app --reload
 
 runs at http://localhost:8000  
-use http://127.0.0.1:8000/docs#/ to test endpoints  
+use http://localhost:8000/docs#/ to test endpoints  
 
 ### **Frontend**
 
