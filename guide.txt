@@ -4,5 +4,6 @@ for backend run
 for frontend run
     npm run dev
 
+use pgadmin to mess with db if needed otherwise
 to edit db manually run (in backend folder?)
-    psql -U postgres -d myapp
+    psql -U postgres -d starboy

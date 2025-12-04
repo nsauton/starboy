@@ -65,6 +65,11 @@ In frontend directory run
 
 runs at http://localhost:3000
 
+### **Usage**
+
+Hello page: http://localhost:3000/hello  
+Start exploring: http://localhost:3000/starboy  
+
 ---
 
 ## 🗺 Roadmap
