@@ -76,10 +76,13 @@ Start exploring: http://localhost:3000/starboy
 
 - add tailwind css
 - create client pages that use react in frontend
+- change/add backend routes to make data retrieval more efficient
 - use dockerfile for the backend
 - expand database to include galaxies and moons
-- add more backend routes to make data retrieval more efficient
+- expand database to include more stats/info about planets/stars(systems)/(moons?)
 - deploy frontend and backend, methods not decided yet
+- search bar for finding specific planets
+- find out what is visible in the night sky based on your location and be able to log it (logging means having accounts)
 
 ---
 
