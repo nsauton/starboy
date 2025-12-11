@@ -1,8 +1,10 @@
 import Link from "next/link";
 
 export default async function systems() {
-    const res = await fetch(`http://localhost:8000/systems`);
+    const res = await fetch(`http://api:8000/systems`);
     const systems = await res.json();
+
+    if (!systems | systems.error) return <div>No systems found</div>
 
     return (
         <div className="p-8">

@@ -3,7 +3,7 @@ import Link from "next/link";
 export default async function Planet({ params }) {
     const { system_id } = await params;
     
-    const res = await fetch(`http://localhost:8000/planets/${system_id}`);
+    const res = await fetch(`http://api:8000/planets/${system_id}`);
     const planets = await res.json();
 
     if (!planets | planets.error) return <div>No planets found</div>

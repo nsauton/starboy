@@ -43,6 +43,30 @@ Starboy blends **FastAPI + PostgreSQL** on the backend with a **Next.js App Rout
 
 ## 🛠 Running Locally
 
+### **Usage**
+
+First start app using docker or local methods below  
+Hello page: http://localhost:3000/hello  
+Start exploring: http://localhost:3000/starboy  
+
+### **Docker**
+
+In root directory there is a docker-compose.yml that runs the database, backend, and frontend all at once  
+    docker compose -f docker-compose.yml up  
+    docker compose -f docker-compose.yml down
+  
+database container is known as db  
+backend or server container is known as api  
+- runs at http://0.0.0.0:8000  
+- use http://0.0.0.0:8000/docs#/ to test endpoints  
+frontend container is known as frontend  
+- runs at http://localhost:3000
+
+
+otherwise to run each individually look below  
+but for now running without docker doesnt work since frontend routes to api use docker format and not local  
+
+
 ### **Database**
 
 make sure empty database called starboy exists in postgres, then backend can be ran to make the tables  
@@ -50,7 +74,7 @@ to mess with db either use pgadmin4 or run the following command in terminal:
     psql -U postgres -d starboy
 
 ### **Backend**
-
+  
 In backend directory run  
     uvicorn main:app --reload
 
@@ -65,17 +89,13 @@ In frontend directory run
 
 runs at http://localhost:3000
 
-### **Usage**
-
-Hello page: http://localhost:3000/hello  
-Start exploring: http://localhost:3000/starboy  
-
 ---
 
 ## 🗺 Roadmap
 
+- add default db to git, so site is populated
+- add env files
 - create client pages that use react in frontend
-- use dockerfile for the backend
 - expand database to include galaxies and moons
 - expand database to include more stats/info about planets/stars(systems)/(moons?)
 - deploy frontend and backend, methods not decided yet

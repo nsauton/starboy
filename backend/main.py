@@ -40,6 +40,9 @@ async def add_system(system: SystemBase, db: db_dependecy):
     db_system = models.Systems(name=system.name, galaxy=system.galaxy)
     db.add(db_system)
     db.commit()
+    db.refresh(db_system)
+
+    return {"system_id": db_system.id}
 
 @app.get("/systems/{system_id}")
 async def get_system(system_id: int, db: db_dependecy):
@@ -69,8 +72,12 @@ async def add_planet(system_id: int, planet: PlanetBase, db: db_dependecy):
 
     db.commit()
     db.refresh(db_system)
+    db.refresh(db_planet)
 
-    return {"system planet count": db_system.planetCount}
+    return {
+        "system planet count": db_system.planetCount, 
+        "planet_id": db_planet.id
+    }
 
 @app.get("/planets/{system_id}")
 async def get_planets_in_system(system_id: int, db: db_dependecy):
