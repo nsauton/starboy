@@ -95,7 +95,7 @@ runs at http://localhost:3000
 
 ## 🗺 Roadmap
 
-- add default db to git, so site is populated
+- add preloaded db to git, so site can be used with my db
 - add env files
 - create client pages that use react in frontend
 - expand database to include galaxies and moons
