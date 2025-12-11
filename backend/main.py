@@ -74,7 +74,15 @@ async def add_planet(system_id: int, planet: PlanetBase, db: db_dependecy):
 
 @app.get("/planets/{system_id}")
 async def get_planets_in_system(system_id: int, db: db_dependecy):
+    system = db.query(models.Systems).filter(models.Systems.id == system_id).first()
+    if not system:
+        raise HTTPException(status_code=404, detail='System not found')
+    
     res = db.query(models.Planets).filter(models.Planets.system_id == system_id).all()
     if not res:
         raise HTTPException(status_code=404, detail='Planets not found')
-    return res
+    
+    return {
+        "system": system.name, 
+        "planets": res
+    }

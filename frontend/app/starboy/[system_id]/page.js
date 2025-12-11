@@ -2,29 +2,40 @@ import Link from "next/link";
 
 export default async function Planet({ params }) {
     const { system_id } = await params;
-
-    const system_res = await fetch(`http://localhost:8000/systems/${system_id}`);
-    const system = await system_res.json();
     
-    const planet_res = await fetch(`http://localhost:8000/planets/${system_id}`);
-    const planets = await planet_res.json();
+    const res = await fetch(`http://localhost:8000/planets/${system_id}`);
+    const planets = await res.json();
 
     if (!planets | planets.error) return <div>No planets found</div>
 
     return (
-        <div>
-            <h1>{system.name}</h1>
-            <ul>
-                {planets.map((planet) => (
-                    <li key={planet.id}>
-                        <h1>{planet.name}</h1>
+        <div className="p-8">
+            <h1 className="text-4xl font-bold mb-6 text-rose-700">{planets.system} System</h1>
+            <h1 className="text-4xl font-bold mb-6 text-purple-600">Planets: </h1>
+
+            <ul className="space-y-4">
+                {planets.planets.map((planet) => (
+                    <li 
+                        key={planet.id}
+                        className="block p-4 rounded-xl border-3 border-purple-600"
+                    >
+                        <h2 className="text-xl font-semibold text-purple-600">
+                                {planet.name}
+                            </h2>
                         <p>type: {planet.type}</p>
                         <p>moons: {planet.moonCount}</p>
                     </li>
                 ))}
             </ul>
 
-            <Link href="/starboy">Return to systems</Link>
+            <div className="mt-6">
+                <Link 
+                href="/starboy"
+                className="text-4xl font-bold mb-6 text-rose-700 hover:underline"
+            >
+                Return to Systems
+            </Link>
+            </div>
         </div>
     );
 }

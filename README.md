@@ -74,9 +74,7 @@ Start exploring: http://localhost:3000/starboy
 
 ## 🗺 Roadmap
 
-- add tailwind css
 - create client pages that use react in frontend
-- change/add backend routes to make data retrieval more efficient
 - use dockerfile for the backend
 - expand database to include galaxies and moons
 - expand database to include more stats/info about planets/stars(systems)/(moons?)
@@ -90,4 +88,4 @@ Start exploring: http://localhost:3000/starboy
 created by me natone  
 inspired by astronomy, the stars, and building interesting backend systems  
 created to learn and experiment with a sql database (postgres) in a fullstack env  
-the starboy name was inpired by the weeknd album  
+yes the starboy name was inpired by the weeknd album  
