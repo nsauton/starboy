@@ -56,9 +56,11 @@ In root directory there is a docker-compose.yml that runs the database, backend,
     docker compose -f docker-compose.yml down
   
 database container is known as db  
+
 backend or server container is known as api  
 - runs at http://0.0.0.0:8000  
 - use http://0.0.0.0:8000/docs#/ to test endpoints  
+
 frontend container is known as frontend  
 - runs at http://localhost:3000
 
