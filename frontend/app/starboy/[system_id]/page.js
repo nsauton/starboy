@@ -28,14 +28,12 @@ export default async function Planet({ params }) {
                 ))}
             </ul>
 
-            <div className="mt-6">
-                <Link 
+            <Link 
                 href="/starboy"
-                className="text-4xl font-bold mb-6 text-rose-700 hover:underline"
+                className="inline-block text-4xl font-bold text-rose-700 hover:underline mt-6"
             >
                 Return to Systems
             </Link>
-            </div>
         </div>
     );
 }
