@@ -43,31 +43,30 @@ Starboy blends **FastAPI + PostgreSQL** on the backend with a **Next.js App Rout
 
 ## 🛠 Running Locally
 
-### **Usage**
-
-First start app using docker or local methods below  
-Hello page: http://localhost:3000/hello  
-Start exploring: http://localhost:3000/starboy  
-
 ### **Docker**
 
 In root directory there is a docker-compose.yml that runs the database, backend, and frontend all at once  
     docker compose -f docker-compose.yml up  
     docker compose -f docker-compose.yml down
   
-database container is known as db  
+database container is known as db 
+- can access on pgadmin4 using info in the compose file, host is localhost
+- or in terminal "psql -h localhost -p 5432 -U postgres -d starboy" with elephant as the password  
 
 backend or server container is known as api  
 - runs at http://0.0.0.0:8000  
 - use http://0.0.0.0:8000/docs#/ to test endpoints  
 
 frontend container is known as frontend  
-- runs at http://localhost:3000
+- runs at http://localhost:3000  
+
+### **Usage**
+ 
+Hello page: http://localhost:3000/hello  
+Start exploring: http://localhost:3000/starboy  
 
 
-otherwise to run each individually look below  
-but for now running without docker doesnt work since frontend routes to api use docker format and not local  
-
+below is how I ran it previously without docker  
 
 ### **Database**
 
