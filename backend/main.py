@@ -19,6 +19,16 @@ class SystemBase(BaseModel):
     galaxy: str
     planetCount: int
 
+class StarBase(BaseModel):
+    name: str
+    constellation: str
+    rightAscension: float
+    declination: float
+    visualMagnitude: float
+    spectralType: str
+    colorIndex: float
+    description: str
+
 
 def get_db():
     db = SessionLocale()
@@ -93,3 +103,11 @@ async def get_planets_in_system(system_id: int, db: db_dependecy):
         "system": system.name, 
         "planets": res
     }
+
+#star routes
+@app.get("/stars")
+async def get_stars(db: db_dependecy):
+    res = db.query(models.Stars).all()
+    if not res:
+        raise HTTPException(status_code=404, detail='No stars found')
+    return res

@@ -1,5 +1,18 @@
-from sqlalchemy import Column, ForeignKey, Integer, String
+from sqlalchemy import Column, ForeignKey, Integer, String, Float
 from database import Base
+
+class Stars(Base):
+    __tablename__ = 'stars'
+
+    id = Column(Integer, primary_key=True, index=True)
+    name = Column(String, index=True, default='')
+    constellation = Column(String, index=True, default='')
+    rightAscension = Column(Float)
+    declination = Column(Float)
+    visualMagnitude = Column(Float)
+    temperature = Column(Integer)
+    spectralType = Column(String, default='')
+    description = Column(String, default='')
 
 class Systems(Base):
     __tablename__ = 'systems'

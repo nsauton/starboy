@@ -70,6 +70,7 @@ Start exploring: http://localhost:3000/starboy
 ## 🗺 Roadmap
 
 - add preloaded db to git, so site can be used with my db
+- populate stars with info from https://github.com/brettonw/YaleBrightStarCatalog  
 - add env files
 - create client pages that use react in frontend
 - expand database to include galaxies and moons
