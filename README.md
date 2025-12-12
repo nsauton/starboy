@@ -65,31 +65,6 @@ frontend container is known as frontend
 Hello page: http://localhost:3000/hello  
 Start exploring: http://localhost:3000/starboy  
 
-
-below is how I ran it previously without docker  
-
-### **Database**
-
-make sure empty database called starboy exists in postgres, then backend can be ran to make the tables  
-to mess with db either use pgadmin4 or run the following command in terminal:  
-    psql -U postgres -d starboy
-
-### **Backend**
-  
-In backend directory run  
-    uvicorn main:app --reload
-
-runs at http://localhost:8000  
-use http://localhost:8000/docs#/ to test endpoints  
-
-### **Frontend**
-
-In frontend directory run  
-    npm install  
-    npm run dev  
-
-runs at http://localhost:3000
-
 ---
 
 ## 🗺 Roadmap
